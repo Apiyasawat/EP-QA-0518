@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EP Q&A; Q17 </title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119340815-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119340815-3');
+</script>
+
+
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="CSS/w3css.css">
+
+<style>
+.header {
+font-family: Verdana, sans-serif;
+font-size: 48px;}
+
+.text {
+font-family: Helvetica, sans-serif;
+}
+
+.green {
+background-color:#228B22;color: white;
+}
+
+.greenGd {
+background: linear-gradient(to bottom, #228b22 0%, #71bc78 100%);color: white;
+}
+
+.darkBrown {
+background-color:#332702;color: white;
+}
+
+
+
+</style>
+
+<body>
+
+<div class="w3-row w3-mobile greenGd" style="width:100vw">
+    <div id="fileName0" class="w3-row w3-mobile w3-center header w3-center" style="padding: 0.5em; margin: 0.5em; 
+    font-size:60px; color: white;"> 
+       </div>
+</div>
+
+<!--question-->
+
+<div class="w3-row w3-mobile text w3-card-4 w3-xxlarge w3-border" style="padding: 1em; margin: auto">
+     
+    A 25-year-old woman presents with complaints of palpitations, exercise intolerance, fatigue, 
+    near syncope, and syncope. She was completely well until 6 months ago, when she contracted 
+    a severe flu-like illness, after which her symptoms began and have continued since.
+
+    <br><br>
+    Her 12-lead electrocardiogram and echocardiogram are normal, as are her thyroid profile 
+    and complete blood count. Findings from her physical examination are normal, except that 
+    when going from sitting to standing her blood pressure decreases from 110/70 mmHg to 100/60 mmHg 
+    and her pulse goes from 80 bpm while sitting to 120 bpm while standing.
+    <br><br>
+    Which of the following is the most appropriate treatment strategy?
+   
+    <ol type="a" style="list-style-position: inside">
+        <li>Cardiac rehabilitation.</li>
+        
+        <li>Instruct to the patient to consume 3L of water/day.</li>
+        <li>Ivabradine 5 mg OD.</li>
+        <li>Propranolol 10 mg tid.</li>
+        <li>Pyridostigmine 30 mg tid.</li>
+       
+    </ol>
+    <div onclick="showAnswer()"
+    class="w3-btn w3-mobile w3-round w3-center text green w3-large" style="margin-bottom: 6em">
+        Show Answer
+    </div>
+</div>
+
+<!--answer-->
+<div id="answer"
+class="w3-row w3-mobile w3-card-4 greenGd w3-border" style="padding: 2em; margin: 0.5em; display: none">
+    <div class="w3-row w3-center text w3-xxlarge">
+        Answer: A </div>
+    
+    <!--explanation-->
+    <div class="w3-row text w3-mobile w3-xxlarge" style="margin: 1em">
+        The history and hemodynamics are consistent with postural tachycardia syndrome (POTS), 
+        demonstrating an increase in heart rate when going from sitting to standing.
+     <br><br>
+        POTS = orthostatic intolerance in which upright position results in inappropriate tachycardia.
+        <br> Treatment starts with non-medication first.
+        <img src="figures/q17/Q17 fig POTs Tilt.jpg" style="width: 100%">
+        <br><br>
+        <img src="figures/q17/Q17 fig 2 guidelines.png" style="width: 100%">
+        <div class="w3-row text w3-medium">
+            Ref: <a href="https://www.sciencedirect.com/science/article/pii/S1547527115003288?via%3Dihub#t0060">
+            2015 HRS Guidelines on POTS and IST
+            </a>
+        </div>
+        </div>
+        
+        <div class="w3-row text w3-xxlarge" style="padding: 1em;margin: 1em">
+            <b>RELATED</b>
+            <div class="w3-row w3-card-4 w3-black w3-mobile w3-padding text">
+                <b>INAPPROPRIATE SINUS TACHYCARDIA</b><br><br>
+                = resting HR>100 and mean 24-hr >90bpm with symptoms, w/o other primary causes.
+                <br>
+                Ivabradine is recommended as IIa indication. 
+            </div>               
+        </div>
+      
+                
+        
+     
+    
+    </div>
+        
+    <!--keywords-->
+        <div id="keywords" class="w3-row w3-mobile w3-large w3-center" style="padding: 3em;
+        margin-bottom: 5em">
+            <span id="k0"></span>
+            <span id="k1"></span>
+            <span id="k2"></span>
+         
+        </div>
+    </div>    
+
+
+</div>
+
+
+<!--footer and Qlist-->
+<div class="w3-bottom w3-bar w3-center darkBrown text w3-large" 
+style="color:#f1f1f1;">
+    <a href="index.html" class="w3-bar-item w3-btn w3-left w3-hover-black w3-mobile">Home</a>
+    <a href="Qlist.html" class="w3-bar-item w3-btn w3-hover-black w3-mobile" >Q List</a> 
+
+    <!--navigator-->
+    <span class="w3-bar-item w3-right w3-mobile">
+        <span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="prev()">&#10094;</span>
+        <span id="fileName1"> </span>
+        <!--span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="next()">&#10095;</span-->
+    </span>
+
+    
+            
+       
+
+</div>
+
+<script>
+
+//file name
+window.onload = function(){getFileName()}; 
+var path = window.location.pathname;
+var n = path.lastIndexOf('Q');
+var name = path.slice(n+1,n+3);
+
+function getFileName() {
+    document.getElementById('fileName0').innerHTML = "Q" + name;
+    document.getElementById('fileName1').innerHTML = "Q" + name;
+}
+
+//show answer
+//keywords
+var keywords = [
+    "palpitaion","syncope"
+]
+
+var dx = ["POTS"]
+
+function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("answer").scrollIntoView();
+    var i;
+    for (i = 0; i < keywords.length; i++) { 
+    document.getElementById("k"+i).innerHTML="#"+keywords[i];
+    
+}
+}
+
+//navigation
+
+function prev() {
+    var i = Number(name);
+    i = i-1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+function next() {
+    var i = Number(name);
+    i = i+1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+
+
+
+
+</script>
+
+</body>
+</html>

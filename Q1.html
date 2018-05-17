@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119340815-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119340815-3');
+</script>
+
+<title>EP Q&A; Q1 </title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="CSS/w3css.css">
+
+<style>
+.header {
+font-family: Verdana, sans-serif;
+font-size: 48px;}
+
+.text {
+font-family: Helvetica, sans-serif;
+}
+
+.green {
+background-color:#228B22;color: white;
+}
+
+.greenGd {
+background: linear-gradient(to bottom, #228b22 0%, #71bc78 100%);color: white;
+}
+
+.darkBrown {
+background-color:#332702;color: white;
+}
+
+
+
+</style>
+
+<body>
+
+<div class="w3-row greenGd w3-mobile" style="width:100vw">
+    <div id="fileName0" class="w3-row w3-center header w3-center" style="padding: 0.5em; margin: 0.5em; 
+    font-size:60px; color: white;"> 
+    </div>
+</div>
+
+<!--question-->
+<div class="w3-row w3-padding w3-mobile">
+    <img src="figures/q1/Left sided tract Rama.jpg" style="width: 100%"></div>
+<div class="w3-row text w3-center w3-card-4 w3-xxlarge w3-border w3-mobile" style="padding: 1em; margin: 0.5em">
+    From the above tracing, what is the most likely diagnosis?
+    <ol type="a" style="list-style-position: inside">
+        <li>sinus tachycardia</li>
+        <li>typical AVNRT</li>
+        <li>AVRT</li>
+        <li>fascicular VT</li>
+    </ol>
+    <div onclick="showAnswer()"
+    class="w3-btn w3-round w3-center text green w3-large w3-mobile" style="margin-bottom: 6em">
+        Show Answer
+    </div>
+</div>
+
+<!--answer-->
+<div id="answer"
+class="w3-row w3-card-4 greenGd w3-border w3-mobile" style="padding: 2em; margin: 0.5em; display: none">
+    <div class="w3-row w3-center text w3-xxlarge">
+        Answer: C </div>
+    
+    <!--explanation-->
+    <div class="w3-rowtext w3-xlarge w3-mobile" style="padding: 1em; margin: auto">
+        Narrow complex tachycardia, CL 320msec, V:A = 1:1. <br>
+        The earliest A is in distal CS (CS 1,2) = eccentric conduction. <br>
+        The 2 most likely diagnoses are O-AVRT using left-sided accessory pathway and left atrial tachycardia.
+        <br><br>
+        <div class="w3-row w3-padding w3-black w3-xlarge text" style="margin-top: 2em">
+        Below are examples of left-sided accessory pathway.
+        <img src="figures/q1/L WPW from MEJ.png" style="width: 100%; padding: 0.5em">
+        <img src="figures/q1/L PW w LBBB.png" style="width: 100%; padding: 0.5em">
+        </div>
+        <div class="w3-row w3-padding w3-xlarge w3-dark-grey text w3-mobile" style="margin-top: 2em">
+            Right-sided accessory pathway.
+            <img src="figures/q1/R PW.png"  style="width: 100%; padding: 0.5em">    
+        </div>
+        
+    <!--keywords-->
+        <div id="keywords" class="w3-large w3-center" style="padding: 3em; margin-bottom: 5em">
+            <span id="k0"></span>
+            <span id="k1"></span>
+            <span id="k2"></span>
+        </div>
+    </div>    
+
+
+</div>
+
+
+<!--footer and Qlist-->
+<div class="w3-bottom w3-bar w3-center darkBrown text w3-large" style="color:#f1f1f1;">
+    <a href="index.html" class="w3-bar-item w3-btn w3-left w3-hover-black w3-mobile">Home</a>
+    <a href="Qlist.html" class="w3-bar-item w3-btn w3-hover-black w3-mobile" >Q List</a> 
+
+    <!--navigator-->
+    <span class="w3-bar-item w3-right w3-mobile">
+        <!--span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="prev()">&#10094;</span-->
+        <span id="fileName1"> </span>
+        <span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="next()">&#10095;</span>
+    </span>
+
+    
+            
+       
+
+</div>
+
+<script>
+//file name
+window.onload = function(){getFileName()}; 
+var path = window.location.pathname;
+var n = path.lastIndexOf('Q');
+var name = path.slice(n+1,n+2);
+
+function getFileName() {
+    document.getElementById('fileName0').innerHTML = "Q" + name;
+    document.getElementById('fileName1').innerHTML = "Q" + name;
+}
+
+
+
+//show answer
+//keywords
+var keywords = [
+    "tachy","EGM","leftPW"
+]
+
+var dx = ["OAVRT_leftPW"]
+
+function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("answer").scrollIntoView();
+    var i;
+    for (i = 0; i < keywords.length; i++) { 
+    document.getElementById("k"+i).innerHTML="#"+keywords[i];
+    
+}
+}
+
+//navigation
+
+function prev() {
+    var i = Number(name);
+    i = i-1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+function next() {
+    var i = Number(name);
+    i = i+1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+
+
+
+</script>
+
+</body>
+</html>

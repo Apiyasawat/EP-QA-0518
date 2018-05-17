@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119340815-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119340815-3');
+</script>
+
+<title>EP Q&A; Q10 </title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="CSS/w3css.css">
+
+<style>
+.header {
+font-family: Verdana, sans-serif;
+font-size: 48px;}
+
+.text {
+font-family: Helvetica, sans-serif;
+}
+
+.green {
+background-color:#228B22;color: white;
+}
+
+.greenGd {
+background: linear-gradient(to bottom, #228b22 0%, #71bc78 100%);color: white;
+}
+
+.darkBrown {
+background-color:#332702;color: white;
+}
+
+
+
+</style>
+
+<body>
+
+<div class="w3-row w3-mobile greenGd" style="width:100vw">
+    <div id="fileName0" class="w3-row w3-mobile w3-center header w3-center" style="padding: 0.5em; margin: 0.5em; 
+    font-size:60px; color: white;"> 
+       </div>
+</div>
+
+<!--question-->
+
+<div class="w3-row w3-mobile text w3-card-4 w3-xxlarge w3-border" style="padding: 1em; margin: auto">
+    A 45 year-old man with known history of non-ischemic cardiomyopathy presents today for 
+    a routine follow-up visit. He was diagnosed with cardiomyopathy approximately 11 months ago 
+    at which time he underwent an extensive work-up including a left heart catheterization 
+    which revealed angiographically normal coronary arteries.
+        <br><br>
+    At the time of his initial presentation 11 months ago, he was in a New York Heart Association
+    (NYHA) class III heart failure. After adequate diuresis, he was started on carvedilol and lisinopril
+    and subsequently titrated up to maximum dosages. He has done well over the last several months. 
+    He was previously very active and still feels fatigue and has some mild dyspnea on exertion. 
+    He has no complaints of palpitations or syncope and no prior documentation of ventricular arrhythmias. 
+    His recent 2-D echocardiogram revealed an EF of 30% with moderate global hypokinesis 
+    and mild mitral regurgitation. No pulmonary hypertension was noted.<br><br>
+
+    Today on physical examination, his blood pressure is 100/55 mmHg with a heart rate of 70 bpm. 
+    He does not have jugular venous distention. His lungs are clear to auscultation. 
+    Cardiac examination reveals normal S1 and S2 with a 2/6 holosystolic murmur heard at the apex 
+    and no gallops or rubs. The remainder of the exam is unremarkable. His 12 lead ECG today in the office
+    is as shown.<br><br>
+    Which of the following should be recommended for the next step in management of this patient?<br><br>
+    
+    <img src="figures/q10/LBBB.png" style="width: 100%">
+   
+
+    <ol type="a" style="list-style-position: inside">
+        <li>ICD</li>
+        <li>CRT-D</li>
+        <li>EP study</li>
+        <li>T-wave alternans</li>
+        <li>Continue current treatment</li>
+       
+    </ol>
+    <div onclick="showAnswer()"
+    class="w3-btn w3-mobile w3-round w3-center text green w3-large" style="margin-bottom: 6em">
+        Show Answer
+    </div>
+</div>
+
+<!--answer-->
+<div id="answer"
+class="w3-row w3-mobile w3-card-4 greenGd w3-border" style="padding: 2em; margin: 0.5em; display: none">
+    <div class="w3-row w3-center text w3-xxlarge">
+        Answer: B </div>
+    
+    <!--explanation-->
+    <div class="w3-row text w3-mobile w3-xxlarge" style="padding: 1em; margin: 1em">
+        This patient meets a Class I indication for both biventricular pacing with 
+        NYHA Class III heart failure and with a QRS>150 and LBBB. 
+        He is optimized on medical therapy with beta blockers and ACE inhibitors. 
+        He also meets a class I indication for an ICD without further testing given 
+        symptoms and an EF of less than 35%.
+        <br><br>
+        <img src="figures/q10/CRT guidelines.jpg" style="width: 100%">
+        <div class="w3-medium">
+            Ref: <a href="http://www.onlinejacc.org/content/60/14/1297">
+                2012 ACC Guidelines for Device Therapy
+            </a><br>
+        </div>
+        
+       <br>
+         
+        
+     
+    
+    </div>
+        
+    <!--keywords-->
+        <div id="keywords" class="w3-row w3-mobile w3-large w3-center" style="padding: 3em;
+        margin-bottom: 5em">
+            <span id="k0"></span>
+            <span id="k1"></span>
+            <span id="k2"></span>
+         
+        </div>
+    </div>    
+
+
+</div>
+
+
+<!--footer and Qlist-->
+<div class="w3-bottom w3-bar w3-center darkBrown text w3-large" 
+style="color:#f1f1f1;">
+    <a href="index.html" class="w3-bar-item w3-btn w3-left w3-hover-black w3-mobile">Home</a>
+    <a href="Qlist.html" class="w3-bar-item w3-btn w3-hover-black w3-mobile" >Q List</a> 
+
+    <!--navigator-->
+    <span class="w3-bar-item w3-right w3-mobile">
+        <span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="prev()">&#10094;</span>
+        <span id="fileName1"> </span>
+        <span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="next()">&#10095;</span>
+    </span>
+
+    
+            
+       
+
+</div>
+
+<script>
+
+//file name
+window.onload = function(){getFileName()}; 
+var path = window.location.pathname;
+var n = path.lastIndexOf('Q');
+var name = path.slice(n+1,n+3);
+
+function getFileName() {
+    document.getElementById('fileName0').innerHTML = "Q" + name;
+    document.getElementById('fileName1').innerHTML = "Q" + name;
+}
+
+//show answer
+//keywords
+var keywords = [
+    "CHF","Device","EKG"
+]
+
+var dx = ["CRTD indication"]
+
+function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("answer").scrollIntoView();
+    var i;
+    for (i = 0; i < keywords.length; i++) { 
+    document.getElementById("k"+i).innerHTML="#"+keywords[i];
+    
+}
+}
+
+//navigation
+
+function prev() {
+    var i = Number(name);
+    i = i-1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+function next() {
+    var i = Number(name);
+    i = i+1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119340815-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119340815-3');
+</script>
+
+<title>EP Q&A; Q12 </title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="CSS/w3css.css">
+
+<style>
+.header {
+font-family: Verdana, sans-serif;
+font-size: 48px;}
+
+.text {
+font-family: Helvetica, sans-serif;
+}
+
+.green {
+background-color:#228B22;color: white;
+}
+
+.greenGd {
+background: linear-gradient(to bottom, #228b22 0%, #71bc78 100%);color: white;
+}
+
+.darkBrown {
+background-color:#332702;color: white;
+}
+
+
+
+</style>
+
+<body>
+
+<div class="w3-row w3-mobile greenGd" style="width:100vw">
+    <div id="fileName0" class="w3-row w3-mobile w3-center header w3-center" style="padding: 0.5em; margin: 0.5em; 
+    font-size:60px; color: white;"> 
+       </div>
+</div>
+
+<!--question-->
+
+<div class="w3-row w3-mobile text w3-card-4 w3-xxlarge w3-border" style="padding: 1em; margin: auto">
+    A 27 year-old man presents with a rapid narrow complex tachycardia. 
+    He receives adenosine 6 mg IV. The presenting tachycardia is terminated. 
+    However, 45 seconds later, he develops rapid atrial fibrillation. 
+    <br><br>
+    Which of the following possible actions of adenosine is most likely to be responsible 
+    for developing atrial fibrillation?
+    
+    <br><br>
+    
+    <ol type="a" style="list-style-position: inside">
+        <li>Decreased intracellular cyclic AMP.</li>
+        <li>Prolonged phase 3 repolarization.</li>
+        <li>Block of AV nodal conduction.</li>
+        <li>Shortened atrial action potential duration.</li>
+        <li>Hypoxia due to bronchospasm.</li>
+       
+    </ol>
+    <div onclick="showAnswer()"
+    class="w3-btn w3-mobile w3-round w3-center text green w3-large" style="margin-bottom: 6em">
+        Show Answer
+    </div>
+</div>
+
+<!--answer-->
+<div id="answer"
+class="w3-row w3-mobile w3-card-4 greenGd w3-border" style="padding: 2em; margin: 0.5em; display: none">
+    <div class="w3-row w3-center text w3-xxlarge">
+        Answer: D </div>
+    
+    <!--explanation-->
+    <div class="w3-row text w3-mobile w3-xxlarge" style="padding: 1em; margin: 1em">
+        The main electrophysiologic properties of adenosine is , via A1 receptor, by stimulation of I<sub>Kach,Kado</sub>
+        in atrial tissues causing shortening of atrial ERP and hyperpolarization of SA and AV nodal cells.
+        <br><br>
+        <img src="figures/q12/A1 A2.jpg" style="width: 100%"> <br><br>
+        In ventricular myocardium, adenosine suppresses triggered activity by antagonizing catecholaminergic
+        stimulating I<sub>Ca</sub>.<br><br>
+        Clinical effects: <br>
+        Slowing SA and AV node and terminating PSVT. <br>
+        Terminating catecholaminergic-induced VT.<br>
+        With potential of initiating of AF/AFL/NSVT after termination of tachycardia.<br><br>
+        <img src="figures/q12/adenosine mechanism.png" style="width: 100%">
+        </div>
+        
+       <div class="w3-medium">
+           Ref:
+           <a href="http://interventions.onlinejacc.org/content/7/6/581">
+            JACC: Cardiovascular Interventions 2014, </a>
+            <a href="http://circ.ahajournals.org/content/83/5/1499">Circulation 1991.</a>
+       </div>
+         
+        
+     
+    
+    </div>
+        
+    <!--keywords-->
+        <div id="keywords" class="w3-row w3-mobile w3-large w3-center" style="padding: 3em;
+        margin-bottom: 5em">
+            <span id="k0"></span>
+            <span id="k1"></span>
+            <span id="k2"></span>
+         
+        </div>
+    </div>    
+
+
+</div>
+
+
+<!--footer and Qlist-->
+<div class="w3-bottom w3-bar w3-center darkBrown text w3-large" 
+style="color:#f1f1f1;">
+    <a href="index.html" class="w3-bar-item w3-btn w3-left w3-hover-black w3-mobile">Home</a>
+    <a href="Qlist.html" class="w3-bar-item w3-btn w3-hover-black w3-mobile" >Q List</a> 
+
+    <!--navigator-->
+    <span class="w3-bar-item w3-right w3-mobile">
+        <span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="prev()">&#10094;</span>
+        <span id="fileName1"> </span>
+        <span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="next()">&#10095;</span>
+    </span>
+
+    
+            
+       
+
+</div>
+
+<script>
+
+//file name
+window.onload = function(){getFileName()}; 
+var path = window.location.pathname;
+var n = path.lastIndexOf('Q');
+var name = path.slice(n+1,n+3);
+
+function getFileName() {
+    document.getElementById('fileName0').innerHTML = "Q" + name;
+    document.getElementById('fileName1').innerHTML = "Q" + name;
+}
+
+//show answer
+//keywords
+var keywords = [
+    "drug","adenosine"
+]
+
+var dx = ["Adenosine shorten AERP"]
+
+function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("answer").scrollIntoView();
+    var i;
+    for (i = 0; i < keywords.length; i++) { 
+    document.getElementById("k"+i).innerHTML="#"+keywords[i];
+    
+}
+}
+
+//navigation
+
+function prev() {
+    var i = Number(name);
+    i = i-1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+function next() {
+    var i = Number(name);
+    i = i+1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+
+
+
+
+</script>
+
+</body>
+</html>

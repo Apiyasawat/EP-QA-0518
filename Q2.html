@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119340815-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119340815-3');
+</script>
+
+<title>EP Q&A; Q2 </title>
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="CSS/w3css.css">
+
+<style>
+.header {
+font-family: Verdana, sans-serif;
+font-size: 48px;}
+
+.text {
+font-family: Helvetica, sans-serif;
+}
+
+.green {
+background-color:#228B22;color: white;
+}
+
+.greenGd {
+background: linear-gradient(to bottom, #228b22 0%, #71bc78 100%);color: white;
+}
+
+.darkBrown {
+background-color:#332702;color: white;
+}
+
+
+
+</style>
+
+<body>
+
+<div class="w3-row w3-mobile greenGd" style="width:100vw">
+    <div id="fileName0" class="w3-row w3-center header w3-center" style="padding: 0.5em; margin: 0.5em; 
+    font-size:60px; color: white;"> 
+    </div>
+</div>
+
+<!--question-->
+<div class="w3-row w3-padding w3-mobile">
+    <img src="figures/q2/noncapture.png" style="width: 100%"></div>
+<div class="w3-row text w3-card-4 w3-xxlarge w3-border w3-mobile" style="padding: 1em; margin: auto">
+    A 65-year-old man presents to the emergency department after a syncopal event. 
+    He was eating dinner and was witnessed to abruptly fall back in his chair for 
+    several seconds before regaining consciousness. His past history includes atrial fibrillation 
+    and hypertension. He tells you that 15 years ago, he received a pacemaker 
+    because “his heart stopped.” A generator change was performed 5 years ago. 
+    He has regular pacemaker checks; the last one was 3 months ago, and he was told everything was fine. 
+    His medications include warfarin, metoprolol, and lisinopril.<br><br>
+    On examination, his blood pressure is 140/80 mm Hg with a heart rate of 75 bpm. 
+    The physical examination is unremarkable. 
+    A pacemaker programmer is available to you if needed. As you speak to him, his eyes roll back 
+    and a telemetry strip is recorded (as shown).<br><br>
+Which of the following should be your next step in management of this patient?
+
+    <ol type="a" style="list-style-position: inside">
+        <li>Increase the ventricular sensitivity of the pacemaker.</li>
+        <li>Place a magnet over the device.</li>
+        <li>Initiate external pacing with cutaneous patches.</li>
+        <li>Place a temporary pacemaker.</li>
+        <li>Increase the ventricular output of the pacemaker. </li>
+    </ol>
+    <div onclick="showAnswer()"
+    class="w3-btn w3-round w3-center text green w3-large w3-mobile" style="margin-bottom: 6em">
+        Show Answer
+    </div>
+</div>
+
+<!--answer-->
+<div id="answer"
+class="w3-row w3-card-4 greenGd w3-border w3-mobile" style="padding: 2em; margin: 0.5em; display: none">
+    <div class="w3-row w3-center text w3-xxlarge">
+        Answer: E </div>
+    
+    <!--explanation-->
+    <div class="w3-rowtext w3-xlarge w3-mobile" style="padding: 1em; margin: auto">
+        Tracing = loss of ventricular capture in an underlying rhythm of complete heart block. <br>
+        Pacing lead is 15 years old so lead problem is highly possible. <br>
+        Interrogation will reveal and temporary fix the cause if it is readily available as in this case. 
+        <br>
+        There is no issue of inappropriate sensing so magnet or adjusting sensitivity would not help.
+      
+        
+    <!--keywords-->
+        <div id="keywords" class="w3-mobile w3-large w3-center" style="padding: 3em;margin-bottom: 5em">
+            <span id="k0"></span>
+            <span id="k1"></span>
+         
+        </div>
+    </div>    
+
+
+</div>
+
+
+<!--footer and Qlist-->
+<div class="w3-bottom w3-bar w3-center darkBrown text w3-large" style="color:#f1f1f1;">
+    <a href="index.html" class="w3-bar-item w3-btn w3-left w3-hover-black w3-mobile">Home</a>
+    <a href="Qlist.html" class="w3-bar-item w3-btn w3-hover-black w3-mobile" >Q List</a> 
+
+    <!--navigator-->
+    <span class="w3-bar-item w3-right w3-mobile">
+        <span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="prev()">&#10094;</span>
+        <span id="fileName1"> </span>
+        <span class="w3-hover-text-khaki" style="cursor: pointer;" onclick="next()">&#10095;</span>
+    </span>
+
+    
+            
+       
+
+</div>
+
+<script>
+
+//file name
+window.onload = function(){getFileName()}; 
+var path = window.location.pathname;
+var n = path.lastIndexOf('Q');
+var name = path.slice(n+1,n+2);
+
+function getFileName() {
+    document.getElementById('fileName0').innerHTML = "Q" + name;
+    document.getElementById('fileName1').innerHTML = "Q" + name;
+}
+
+
+//show answer
+//keywords
+var keywords = [
+    "pacemaker","nonCapture"
+]
+
+var dx = ["V_noncapture"]
+
+function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("answer").scrollIntoView();
+    var i;
+    for (i = 0; i < keywords.length; i++) { 
+    document.getElementById("k"+i).innerHTML="#"+keywords[i];
+    
+}
+}
+
+//navigation
+
+function prev() {
+    var i = Number(name);
+    i = i-1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+function next() {
+    var i = Number(name);
+    i = i+1;
+    document.getElementById('fileName1').innerHTML=i;
+    window.location.href = "Q"+i+".html";
+}
+
+
+
+
+</script>
+
+</body>
+</html>
