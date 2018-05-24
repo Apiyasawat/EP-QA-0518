@@ -150,7 +150,7 @@ var dx = ["V_noncapture"]
 
 function showAnswer() {
     document.getElementById("answer").style.display = "block";
-    document.getElementById("answer").scrollIntoView();
+    document.getElementById("answer").scrollIntoView({behavior:"smooth", block:"start"});
     var i;
     for (i = 0; i < keywords.length; i++) { 
     document.getElementById("k"+i).innerHTML="#"+keywords[i];
